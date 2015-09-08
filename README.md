@@ -32,3 +32,22 @@ are only available by creating an account on ngrok.com. If you need them, [creat
 
 ## Developing on ngrok
 [ngrok developer's guide](docs/DEVELOPMENT.md)
+
+### 修改了代码
+
+修改了src/ngrok/log/logger.go中的log包地址，源地址指向code.google，导致无法编译
+
+### 编译及运行
+
+编译时需要环境
+
+```bash
+sudo apt-get install go-lang mercurial
+make release-client
+```
+
+之后运行代码如下
+
+```bash
+./bin/ngrok -config=./ngrok.config -proto=tcp 22
+```
